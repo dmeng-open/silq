@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+*.egg-info/
+dist/
+build/
+.coverage
+htmlcov/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+token.json
+secrets.json
+
+# Local data and private reports
+*.db
+*.sqlite
+*.sqlite3
+.local/
+.private/
+logs/
+traces/
+
+# Personal Claude Code overrides (project .claude/settings.json IS committed)
+.claude/settings.local.json
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Do NOT ignore docs/learning: learning reports are core project artifacts.

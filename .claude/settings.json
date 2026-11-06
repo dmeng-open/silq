@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "bash",
+            "command": "if grep -Eq '\"model\"[[:space:]]*:[[:space:]]*\"[^\"]*fable'; then echo 'Blocked by silq project policy: do not use Fable. Use opus or sonnet instead.' >&2; exit 2; fi",
+            "onFailure": "block",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
